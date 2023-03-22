@@ -1,2 +1,1 @@
-# C
-C Language Programs
+This repository contains the problems based on numbers

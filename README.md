@@ -1,1 +1,1 @@
-This repository contains the problems based on numbers
+This repository contains the programs based on numbers

@@ -19,10 +19,16 @@ bool CheckPrime(int iNo)
         if((iNo % iCnt) == 0)
         {
             break;
-            return true;
         }
     }
-    return false;
+    if((iNo % iCnt) == 0)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
 /////////////////////////////////////////////////////////////////////////

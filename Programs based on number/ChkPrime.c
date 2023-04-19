@@ -21,13 +21,13 @@ bool CheckPrime(int iNo)
             break;
         }
     }
-    if((iNo % iCnt) == 0)
+    if((iCnt == (iNo/2) +1)
     {
-        return false;
+        return true;
     }
     else
     {
-        return true;
+        return false;
     }
 }
 

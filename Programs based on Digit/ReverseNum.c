@@ -1,0 +1,49 @@
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Reverse
+//  Description :   Used to reverse the digits of a number
+//  Input :         Integer
+//  Output :        Integer
+//
+/////////////////////////////////////////////////////////////////////
+
+int Reverse(int iNo)
+{
+    int iDigit = 0;
+    int iRev = 0;
+
+    while(iNo > 0)
+    {
+        iDigit = iNo % 10;
+        iRev = iRev * 10 + iDigit;
+        iNo = iNo / 10;
+    }
+
+   return iRev;
+}
+
+/////////////////////////////////////////////////////////////////////////
+//  Accept the number from user and reverse the number of digits
+/////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+    printf("Enter number\n");
+    scanf("%d",&iValue);
+
+    iRet = Reverse(iValue);
+
+    printf("Reverse number is : %d\n",iRet);
+
+    return 0;
+}
+/////////////////////////////////////////////////////////////////////////
+//
+// Input : 2151
+// Output : 1512
+//
+/////////////////////////////////////////////////////////////////////////

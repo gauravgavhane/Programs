@@ -1,0 +1,50 @@
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CountDigits
+//  Description :   Used to count the number of digits
+//  Input :         Integer
+//  Output :        Integer
+//
+/////////////////////////////////////////////////////////////////////
+
+int CountDigits(int iNo)
+{
+    int iCnt = 0;
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+    while(iNo > 0)
+    {
+        iCnt++;
+        iNo = iNo /10;
+    }
+    return iCnt;
+}
+
+/////////////////////////////////////////////////////////////////////////
+//  Accept the number from user and count the number of digits
+/////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+    printf("Enter number : ");
+    scanf("%d",&iValue);
+
+    iRet = CountDigits(iValue);
+
+    printf("Number of digits are : %d\n",iRet);
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////
+//
+// Input : 7856
+// Output : 4
+//
+/////////////////////////////////////////////////////////////////////////
+

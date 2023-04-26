@@ -1,40 +1,47 @@
-// Input :  Row 4   Columns     4
-/*
-    *   *   *   *
-    *   *   *   *
-    *   *   *   *
-    *   *   *   *
-*/
-
 #include<stdio.h>
 
 void Display(int iRow, int iCol)
 {
         int i = 0, j = 0;
-        //      1           2         3
-        for(i = 1; i <= iRow;i++)   // Outer
-        {                       // 4
-            //       1           2         3
-            for(j = 1; j<= iCol; j++)   // Inner
+
+        for(i = 1; i <= iRow;i++)   
+        {                       
+
+            for(j = 1; j<= iCol; j++)   
             {
-                printf("*\t");      // 4
+                printf("*\t");     
             }
             printf("\n");
 
         }
 }
 
+////////////////////////////////////////////////////////////////////
+//  Accept number from user and display the pattern
+////////////////////////////////////////////////////////////////////
+
 int main()
 {
     int iValue1 =0, iValue2 = 0;
 
-    printf("Enter number of rows :\n");
+    printf("Enter number of rows : ");
     scanf("%d",&iValue1);
 
-    printf("Enter number of columns :\n");
+    printf("Enter number of columns : ");
     scanf("%d",&iValue2);
 
     Display(iValue1,iValue2);
 
     return 0;
 }
+
+////////////////////////////////////////////////////////////////////
+/*
+//  Input :  Row 4   Columns     4
+//
+//  Output :	    *   *   *   *
+//		    *   *   *   *
+//		    *   *   *   *
+//		    *   *   *   *
+*/
+////////////////////////////////////////////////////////////////////

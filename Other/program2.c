@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Display
+//  Description :   Used to print digit into word
+//  Input :         Integer
+//  Output :        Void
+//
+//////////////////////////////////////////////////////////////////////////////////////
+
+void Display(int iNo)
+{
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    if (iNo >= 0 && iNo <= 9)
+    {
+        char *words[] = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+
+        printf("Digit in word : %s\n", words[iNo]);
+    }
+    else
+    {
+        printf("Invalid Number\n");
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////
+// Accept single digit number from user and print it into word
+//////////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter digit : ");
+    scanf("%d",&iValue);
+
+    Display(iValue);
+    
+    return 0;
+}
+//////////////////////////////////////////////////////////////////////////////////////
+//
+// Input  : 9
+// Output : Nine
+//
+// Input  : -3 
+// Output : Three
+//
+// Input  : 12
+// Output : Invalid Number
+//
+//////////////////////////////////////////////////////////////////////////////////////

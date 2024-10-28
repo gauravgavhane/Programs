@@ -1,0 +1,56 @@
+#include<stdio.h>
+
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : MultDigits
+//  Description :   Used to multiply the digits
+//  Input :         Integer
+//  Output :        Integer
+//
+//////////////////////////////////////////////////////////////////////////////////////
+
+int MultDigits(int iNo)
+{
+    int iDigit = 0, iMult = 1;
+
+    while (iNo != 0)
+    {
+        iDigit = iNo % 10;
+        iNo = iNo / 10;
+
+        if (iDigit != 0)
+        {
+            iMult = iMult * iDigit;
+        }
+        
+    }
+    return iMult;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+//  Accepts number from user and return the multiplication of all digits
+//////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0, iRet = 0;
+
+    printf("Enter the number : ");
+    scanf("%d",&iValue);
+
+    iRet = MultDigits(iValue);
+
+    printf(" Multiplication of digits : %d\n",iRet);
+
+    return 0;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////
+
+Input  : 2395
+Output : 270
+
+Input  : 1018
+Output : 8
+
+*//////////////////////////////////////////////////////////////////////////////////////

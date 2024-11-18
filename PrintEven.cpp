@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : PrintEven
+//  Description   : Used to print even number for a given number of times
+//  Input         : Integer
+//  Output        : Void
+//
+///////////////////////////////////////////////////////////////////////////////
+
+void PrintEven(int iNo)
+{
+    int iCnt = 0;
+
+    if(iNo < 0)
+    {
+        return;
+    }
+
+    for(iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        cout<<iCnt*2<<"\t";
+    }
+    cout<<endl;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Accept one number from user and print that number of even numbers on screen
+///////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    cout<<"Enter how many times you want to print even numbers : ";
+    cin>>iValue;
+
+    PrintEven(iValue);
+
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Input : 7
+// Output: 2    4   6   8   10  12  14
+//
+///////////////////////////////////////////////////////////////////////////////

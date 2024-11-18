@@ -1,0 +1,53 @@
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name :   DisplayNonFactors
+//  Description :     Used to display non factors of number
+//  Input :           Integer
+//  Output :          Integer
+//
+///////////////////////////////////////////////////////////////////////////////
+
+void DisplayNonFactors(int iNo)
+{
+    int iCnt = 0;
+
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    for(iCnt = 1; iCnt < iNo ; iCnt++)
+    {
+        if((iNo % iCnt) != 0)
+        {
+            printf("%d\n",iCnt);
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Accept number from user and display its non-factors 
+///////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter number : ");
+    scanf("%d",&iValue);
+
+    DisplayNonFactors(iValue);
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Input :     6
+// Output :    4    5
+//
+// Input :     12
+// Output :    5    7   8   9   10  11
+//
+///////////////////////////////////////////////////////////////////////////////
